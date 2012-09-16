@@ -3,5 +3,6 @@
 
 module Evolution_03_Junior where
 
-fac 0 = 1
-fac n = (n+2) * fac (n+1)
+fac :: Integer -> Integer
+fac 0    =  1
+fac n = n * fac (n-1)

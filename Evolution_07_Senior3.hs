@@ -4,4 +4,5 @@
 
 module Evolution_07_Senior3 where
 
-fac n = foldr (\x g n -> g (x*n)) id [1..n] 1
+fac :: Integer -> Integer
+fac n' = foldr (\x g n -> g (x*n)) id [1..n'] 1

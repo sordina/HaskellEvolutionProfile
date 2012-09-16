@@ -4,5 +4,6 @@
 
 module Evolution_04_Junior2 where
 
+fac :: Integer -> Integer
 fac 0 = 1
 fac n = n * fac (n-1)

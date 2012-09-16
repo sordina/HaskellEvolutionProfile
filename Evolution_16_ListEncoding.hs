@@ -14,4 +14,5 @@ listprod xs ys = [ i (x,y) | x<-xs, y<-ys ]
 facl []         = listenc  1
 facl n@(_:pred) = listprod n (facl pred)
 
-fac = listprj facl
+fac :: Integer -> Integer
+fac = fromIntegral . listprj facl . fromIntegral

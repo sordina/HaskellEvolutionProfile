@@ -16,4 +16,5 @@ y f     = f (y f)
 
 cond p f g x = if p x then f x else g x
 
+fac :: Integer -> Integer
 fac  = y (b (cond ((==) 0) (k 1)) (b (s (*)) (c b pred)))

@@ -76,4 +76,5 @@ facTerm = Rec "f" (Abs "n"
                         (App (Occ "f")
                              (App (App (Use "-") (Occ "n")) (Lit 1))))))
 
+fac :: Integer -> Integer
 fac n = prjNum (eval [] (App facTerm (Lit n)))
