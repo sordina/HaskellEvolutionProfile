@@ -8,26 +8,24 @@ by using the [Criterion](http://hackage.haskell.org/package/criterion) profiling
 
 ## Omissions
 
-I had issues compiling the examples for
-
-* Static
-
-... so these have been excluded for the present. Please don't hesitate to send
-a pull-request that modifies these solutions to work :-)
+The static solution won't have a run-time component worth profiling ;-)
 
 ## Running
 
-Generate a profiling report by running `make`.  The report should be generated at "images/report1.html".
+The runtimes are calculated for an average of 100 evaluations of `fac 8`.
 
-I reran the report twice with the worst offenders removed to
+Generate a profiling report by running `make`.  The report should be generated
+at "images/report1.html".
+
+I reran the report three-times with the worst offenders removed to
 show the variance between good solutions. These results can be
-found at "images/report2.html" and "images/report3.html"
+found at "images/report2.html", "images/report3.html" and "images/report4.html"
 respectively.
 
 ## Results
 
-The memoizing solution seems to be the clear winner at this point, with the
-list-encoding, followed by the interpretive solutions being the clear losers:
+The memoizing solution seems to be the clear winner at this point, with PHD
+solution being the clear loser:
 
 X-Axis in milliseconds:
 
