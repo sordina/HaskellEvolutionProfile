@@ -16,7 +16,7 @@ I Had issues compiling the examples for
 * PostDoc
 
 ... so these have been excluded for the present. Please don't hesitate to send
-a pull-request that modify these solutions to work :-)
+a pull-request that modifies these solutions to work :-)
 
 ## Running
 
