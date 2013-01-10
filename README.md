@@ -11,9 +11,6 @@ by using the [Criterion](http://hackage.haskell.org/package/criterion) profiling
 I had issues compiling the examples for
 
 * Static
-* BeginningGraduate
-* PHD
-* PostDoc
 
 ... so these have been excluded for the present. Please don't hesitate to send
 a pull-request that modifies these solutions to work :-)
@@ -32,8 +29,18 @@ respectively.
 The memoizing solution seems to be the clear winner at this point, with the
 list-encoding, followed by the interpretive solutions being the clear losers:
 
+X-Axis in milliseconds:
+
 <img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/1.png" alt="All results" />
 
-<img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/2.png" alt="All results" />
+X-Axis in microseconds:
 
-<img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/3.png" alt="All results" />
+<img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/2.png" alt="Partial results 2" />
+
+X-Axis in nanoseconds:
+
+<img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/3.png" alt="Partial results 3" />
+
+X-Axis in nanoseconds:
+
+<img src="https://raw.github.com/sordina/HaskellEvolutionProfile/master/images/4.png" alt="Partial results 4" />

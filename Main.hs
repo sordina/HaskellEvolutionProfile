@@ -28,28 +28,28 @@ import qualified Evolution_24_TenuredProfessor
 import Criterion.Main
 
 main = defaultMain [ bgroup "fact" [
-         bench "Freshman"                $ nf Evolution_01_Freshman.fac                10
-       , bench "Sophomore"               $ nf Evolution_02_Sophomore.fac               10
-       , bench "Junior"                  $ nf Evolution_03_Junior.fac                  10
-       , bench "Junior2"                 $ nf Evolution_04_Junior2.fac                 10
-       , bench "Senior"                  $ nf Evolution_05_Senior.fac                  10
-       , bench "Senior2"                 $ nf Evolution_06_Senior2.fac                 10
-       , bench "Senior3"                 $ nf Evolution_07_Senior3.fac                 10
-       , bench "Memoizing"               $ nf Evolution_08_Memoizing.fac               10
-       , bench "Pointless"               $ nf Evolution_09_Pointless.fac               10
-       , bench "Iterative"               $ nf Evolution_10_Iterative.fac               10
-       , bench "IterativeOneLiner"       $ nf Evolution_11_IterativeOneLiner.fac       10
-       , bench "Accumulating"            $ nf Evolution_12_Accumulating.fac            10
-       , bench "ContinuationPassing"     $ nf Evolution_13_ContinuationPassing.fac     10
-       , bench "BoyScout"                $ nf Evolution_14_BoyScout.fac                10
-       , bench "Combinatory"             $ nf Evolution_15_Combinatory.fac             10
-       , bench "ListEncoding"            $ nf Evolution_16_ListEncoding.fac            10
-       , bench "Interpretive"            $ nf Evolution_17_Interpretive.fac            10
-       -- , bench "Static"                  $ nf Evolution_18_Static.fac                  10000
-       , bench "BeginningGraduate"       $ nf Evolution_19_BeginningGraduate.fac       10000
-       , bench "Origamist"               $ nf Evolution_20_Origamist.fac               10
-       , bench "CartesianallyInclined"   $ nf Evolution_21_CartesianallyInclined.fac   10
-       , bench "PHD"                     $ nf Evolution_22_PHD.fac                     1000
-       , bench "PostDoc"                 $ nf Evolution_23_PostDoc.fac                 1000
-       , bench "TenuredProfessor"        $ nf Evolution_24_TenuredProfessor.fac        10
+         bench "Freshman"                $ nf Evolution_01_Freshman.fac                8
+       , bench "Sophomore"               $ nf Evolution_02_Sophomore.fac               8
+       , bench "Junior"                  $ nf Evolution_03_Junior.fac                  8
+       , bench "Junior2"                 $ nf Evolution_04_Junior2.fac                 8
+       , bench "Senior"                  $ nf Evolution_05_Senior.fac                  8
+       , bench "Senior2"                 $ nf Evolution_06_Senior2.fac                 8
+       , bench "Senior3"                 $ nf Evolution_07_Senior3.fac                 8
+       , bench "Memoizing"               $ nf Evolution_08_Memoizing.fac               8
+       , bench "Pointless"               $ nf Evolution_09_Pointless.fac               8
+       , bench "Iterative"               $ nf Evolution_10_Iterative.fac               8
+       , bench "IterativeOneLiner"       $ nf Evolution_11_IterativeOneLiner.fac       8
+       , bench "Accumulating"            $ nf Evolution_12_Accumulating.fac            8
+       , bench "ContinuationPassing"     $ nf Evolution_13_ContinuationPassing.fac     8
+       , bench "BoyScout"                $ nf Evolution_14_BoyScout.fac                8
+       , bench "Combinatory"             $ nf Evolution_15_Combinatory.fac             8
+       , bench "ListEncoding"            $ nf Evolution_16_ListEncoding.fac            8
+       , bench "Interpretive"            $ nf Evolution_17_Interpretive.fac            8
+       -- , bench "Static"                  $ nf Evolution_18_Static.fac               8 10000
+       , bench "BeginningGraduate"       $ nf Evolution_19_BeginningGraduate.fac       8
+       , bench "Origamist"               $ nf Evolution_20_Origamist.fac               8
+       , bench "CartesianallyInclined"   $ nf Evolution_21_CartesianallyInclined.fac   8
+       , bench "PHD"                     $ nf Evolution_22_PHD.fac                     8
+       , bench "PostDoc"                 $ nf Evolution_23_PostDoc.fac                 8
+       , bench "TenuredProfessor"        $ nf Evolution_24_TenuredProfessor.fac        8
        ] ]
