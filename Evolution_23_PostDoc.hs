@@ -7,6 +7,9 @@
 
 module Evolution_23_PostDoc where
 
+import Control.DeepSeq (NFData(rnf))
+import Data.List (genericTake)
+
 newtype Mu f = In (f (Mu f))
 
 unIn (In x) = x
@@ -24,6 +27,19 @@ instance Functor N where
   fmap g (S x) = S (g x)
 
 type Nat = Mu N
+
+instance NFData Nat where
+   rnf (In (S x)) = rnf x `seq` ()
+   rnf (In Z)     = ()
+instance Num Nat where
+   (+) = add
+   (*) = mult
+   signum (In Z) = zero
+   signum _      = suck zero
+   fromInteger 0         = zero
+   fromInteger n | n > 0 = last . genericTake n . iterate suck $ zero
+                 | n < 0 = negate . fromInteger . abs $ n
+   abs = error "Nat is not negative"
 
 zero   = In  Z
 suck n = In (S n)

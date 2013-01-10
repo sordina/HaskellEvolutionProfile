@@ -7,6 +7,9 @@
 
 module Evolution_22_PHD where
 
+import Control.DeepSeq (NFData(rnf))
+import Data.List (genericTake)
+
 newtype Mu f = Mu (f (Mu f)) 
 
 instance Show (f (Mu f)) where
@@ -35,6 +38,18 @@ nelim z s (Succ n) = s n
 
 type Nat = Mu N
 
+instance NFData Nat where
+   rnf (Mu (Succ x)) = rnf x `seq` ()
+   rnf (Mu Zero)     = ()
+instance Num Nat where
+   (+) = plus
+   (*) = mult
+   signum (Mu Zero) = zero
+   signum _         = suck zero
+   fromInteger 0         = zero
+   fromInteger n | n > 0 = last . genericTake n . iterate suck $ zero
+                 | n < 0 = negate . fromInteger . abs $ n
+   abs = error "Nat is not negative"
 
 -- conversion to internal numbers, conveniences and applications
 

@@ -5,8 +5,23 @@
 
 module Evolution_19_BeginningGraduate where
 
+import Control.DeepSeq (NFData(rnf))
+import Data.List (genericTake)
+
 data Nat = Zero | Succ Nat
 
+instance NFData Nat where
+   rnf (Succ x) = rnf x `seq` ()
+   rnf Zero     = ()
+instance Num Nat where
+   (+) = plus
+   (*) = mult
+   signum Zero = Zero
+   signum _    = one
+   fromInteger 0         = Zero
+   fromInteger n | n > 0 = last . genericTake n . iterate Succ $ Zero
+                 | n < 0 = negate . fromInteger . abs $ n
+   abs = error "Nat is not negative"
 
 -- iteration and some applications
 
