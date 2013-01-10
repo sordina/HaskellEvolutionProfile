@@ -28,7 +28,7 @@ uncount n = Right (n, n-1)
 
 hylo  f  g    = cata g . ana f
 
-hylo' f (n,c) = either (const n) (c . pair (id, hylo' f (c,n))) . f
+hylo' f (n,c) = either (const n) (c . pair (id, hylo' f (n,c))) . f
 
 pair (f,g) (x,y) = (f x, g y)
 
