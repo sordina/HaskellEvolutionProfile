@@ -1,4 +1,4 @@
-module Evolution_Meta where
+module Main where
 
 import qualified Evolution_01_Freshman
 import qualified Evolution_02_Sophomore
@@ -27,7 +27,7 @@ import qualified Evolution_20_Origamist
 
 import Criterion.Main
 
-main = defaultMain [
+main = defaultMain [ bgroup "fact" [
          bench "Freshman"                $ nf Evolution_01_Freshman.fac                10
        , bench "Sophomore"               $ nf Evolution_02_Sophomore.fac               10
        , bench "Junior"                  $ nf Evolution_03_Junior.fac                  10
@@ -51,4 +51,4 @@ main = defaultMain [
        -- , bench "PHD"                     $ nf Evolution_22_PHD.fac                     1000
        -- , bench "PostDoc"                 $ nf Evolution_23_PostDoc.fac                 1000
        -- , bench "TenuredProfessor"        $ nf Evolution_24_TenuredProfessor.fac        1000
-       ]
+       ] ]
