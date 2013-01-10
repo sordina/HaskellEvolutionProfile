@@ -3,6 +3,11 @@ HaskellEvolutionProfile
 
 ### Profiling ["Evolution of a Haskell Programmer"](http://www.willamette.edu/~fruehr/haskell/evolution.html)
 
+This project aims to profile the various factorial solutions presented in ["Evolution of a Haskell Programmer"](http://www.willamette.edu/~fruehr/haskell/evolution.html)
+by using the [Criterion](http://hackage.haskell.org/package/criterion) profiling library.
+
+## Omissions
+
 I Had issues compiling the examples for
 
 * Static
