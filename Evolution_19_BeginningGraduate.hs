@@ -18,9 +18,8 @@ instance Num Nat where
    (*) = mult
    signum Zero = Zero
    signum _    = one
-   fromInteger 0         = Zero
-   fromInteger n | n > 0 = last . genericTake n . iterate Succ $ Zero
-                 | n < 0 = negate . fromInteger . abs $ n
+   fromInteger n | n >= 0 = last . genericTake (n+1) . iterate Succ $ Zero
+                 | n <  0 = negate . fromInteger . abs $ n
    abs = error "Nat is not negative"
 
 -- iteration and some applications

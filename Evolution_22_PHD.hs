@@ -46,9 +46,8 @@ instance Num Nat where
    (*) = mult
    signum (Mu Zero) = zero
    signum _         = suck zero
-   fromInteger 0         = zero
-   fromInteger n | n > 0 = last . genericTake n . iterate suck $ zero
-                 | n < 0 = negate . fromInteger . abs $ n
+   fromInteger n | n >= 0 = last . genericTake (n+1) . iterate suck $ zero
+                 | n <  0 = negate . fromInteger . abs $ n
    abs = error "Nat is not negative"
 
 -- conversion to internal numbers, conveniences and applications
