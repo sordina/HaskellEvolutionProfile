@@ -19,6 +19,10 @@ I Had issues compiling the examples for
 
 ... so these have been excluded for the present.
 
+## Running
+
+Generate a profiling report by running `make`.
+
 ## Results
 
 The memoizing solution seems to be the clear winner at this point, with the
