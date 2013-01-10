@@ -15,7 +15,6 @@ I Had issues compiling the examples for
 * Origamist
 * PHD
 * PostDoc
-* TenuredProfessor
 
 ... so these have been excluded for the present. Please don't hesitate to send
 a pull-request that modify these solutions to work :-)

@@ -23,7 +23,7 @@ import qualified Evolution_20_Origamist
 -- import qualified Evolution_21_CartesianallyInclined
 -- import qualified Evolution_22_PHD
 -- import qualified Evolution_23_PostDoc
--- import qualified Evolution_24_TenuredProfessor
+import qualified Evolution_24_TenuredProfessor
 
 import Criterion.Main
 
@@ -50,5 +50,5 @@ main = defaultMain [ bgroup "fact" [
        , bench "Origamist"               $ nf Evolution_20_Origamist.fac               10
        -- , bench "PHD"                     $ nf Evolution_22_PHD.fac                     1000
        -- , bench "PostDoc"                 $ nf Evolution_23_PostDoc.fac                 1000
-       -- , bench "TenuredProfessor"        $ nf Evolution_24_TenuredProfessor.fac        1000
+       , bench "TenuredProfessor"        $ nf Evolution_24_TenuredProfessor.fac        10
        ] ]
