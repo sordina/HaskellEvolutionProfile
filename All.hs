@@ -1,3 +1,8 @@
+--
+-- NOTE: This file "All.hs" is intended as a verbatim copy of the solutions.
+-- It will not compile. See "Main.hs" for the main entry point.
+--
+
 {-
  - The Evolution of a Haskell Programmer
  - Fritz Ruehr, Willamette University
