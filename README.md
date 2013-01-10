@@ -17,11 +17,17 @@ I Had issues compiling the examples for
 * PostDoc
 * TenuredProfessor
 
-... so these have been excluded for the present.
+... so these have been excluded for the present. Please don't hesitate to send
+a pull-request that modify these solutions to work :-)
 
 ## Running
 
-Generate a profiling report by running `make`.
+Generate a profiling report by running `make`.  The report should be generated at "images/report1.html".
+
+I reran the report twice with the worst offenders removed to
+show the variance between good solutions. These results can be
+found at "images/report2.html" and "images/report3.html"
+respectively.
 
 ## Results
 
