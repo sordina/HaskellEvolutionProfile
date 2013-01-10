@@ -19,6 +19,8 @@ I Had issues compiling the examples for
 
 ... so these have been excluded for the present.
 
+## Results
+
 The memoizing solution seems to be the clear winner at this point, with the
 list-encoding, followed by the interpretive solutions being the clear losers:
 
