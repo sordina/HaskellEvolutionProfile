@@ -12,7 +12,6 @@ I Had issues compiling the examples for
 
 * Static
 * BeginningGraduate
-* Origamist
 * PHD
 * PostDoc
 
